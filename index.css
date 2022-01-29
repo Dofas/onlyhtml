@@ -1,0 +1,150 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Avenir-Roman';
+    src: url("./assets/fonts/AvenirLTStd-Roman.woff");
+         url("./assets/fonts/AvenirLTStd-Roman.woff2");
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url("./assets/fonts/AvenirLTStd-Book.woff");
+         url("./assets/fonts/AvenirLTStd-Book.woff2");
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: normal;
+}
+
+.customText {
+    font-family: Avenir-Roman;
+    font-size: 14px;
+    line-height: 1.43;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+}
+
+.redNotification {
+    background: #e62c2c;
+}
+.greenNotification {
+    background: #24cf5f;
+}
+
+.container {
+    max-width: 1440px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 16px 32px 16px 34px;
+    color: #fff;
+    background: #171b20;
+}
+
+.headerNavigation {
+    display: flex;
+    align-items: center;
+}
+
+.headerNavigation > li {
+    margin-right: 24px;
+}
+
+.headerNavigation > li:last-child {
+    margin-right: 0;
+}
+
+.headerInfo {
+    display: flex;
+    align-items: center;
+}
+
+
+ /*сумніваюсь що це правильно*/
+.headerNavigationItem {
+    position: relative;
+}
+
+.headerNavigationItem:active:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: -24px;
+    border-bottom: 1px solid #24cf5f;
+}
+
+.headerHelpBar {
+    display: flex;
+}
+
+.headerHelpBar > span {
+    margin-right: 27px;
+}
+
+.headerHelpBar > span:last-child {
+    margin-right: 32px;
+}
+
+.circleBorder {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    position: relative;
+}
+
+.notificationCount {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: -7px;
+    left: 70%;
+    border-radius: 50%;
+    font-family: Avenir;
+    font-size: 10px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circleBorder > a,
+.circleBorder > a > img {
+    width: 16px;
+    height: 16px;
+}
+
+.headerUserInfo {
+    display: flex;
+    align-items: center;
+}
+
+.avatarUser {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
