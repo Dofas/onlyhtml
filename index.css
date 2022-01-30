@@ -30,11 +30,44 @@
     letter-spacing: normal;
 }
 
+.customTextAvenir {
+    font-family: Avenir;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #5f6773;
+}
+
 .redNotification {
     background: #e62c2c;
 }
 .greenNotification {
     background: #24cf5f;
+}
+
+.status {
+    width: 8px;
+    height: 8px;
+    border: solid 2px #282e36;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.statusOnline {
+    background: #25c14a;;
+}
+
+.statusUnread {
+    background: #fff;
+}
+
+.statusOffline {
+    background: #ff4646;
 }
 
 .container {
@@ -80,8 +113,8 @@ header {
     content: '';
     position: absolute;
     width: 100%;
-    bottom: -24px;
-    border-bottom: 1px solid #24cf5f;
+    bottom: -25px;
+    border-bottom: 2px solid #24cf5f;
 }
 
 .headerHelpBar {
@@ -146,5 +179,203 @@ header {
 
 .content {
     display: flex;
+    width: 100%;
+    height: calc(100vh - 64px);
+}
+
+.channels {
+    background: rgba(23, 26, 30, 0.9);
+    color: #fff;
+}
+
+.subHeaderChannels {
+    font-size: 16px;
+    padding: 16px 16px 0 32px;
+    line-height: 1.25;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.channels > div:first-child {
+    margin-bottom: 34px;
+}
+
+.channels > div:nth-child(3) {
+    margin-top: 30px;
+    margin-bottom: 24px;
+}
+
+.subHeaderChannels > img {
+    width: 24px;
+    height: 24px;
+    border: solid 1px #40454b;
+    border-radius: 50%;
+}
+
+ /*запитати бо цифри не в тому порядку як на макеті*/
+
+.channels > ul > li > a {
+    display: flex;
+    justify-content: space-between;
+    color: #5f6773;
+    padding: 6px 16px 6px 32px;
+    margin-bottom: 12px;
+}
+
+.channels > ul > li > a:active {
+    background-color: rgba(255,255,255,0.03);
+    padding-top: 6px;
+    padding-bottom: 6px;
+    color: #fff;
+}
+/*вже не перший раз зустрічаю таке що наприклад всі елементи мають однаковий падінг*/
+/*але всередині є або дівайдер який розтягнутий на всю ширину блока або силка*/
+/*яка підсвічується на всю ширину і ввесь час це роблю через костиль що*/
+/*викидаю контейнер і всьому вручну прописую відступи це нормально ?*/
+
+.messages {
+    background: #111519;
+    color: #fff;
+}
+
+.subHeaderMessages {
+    box-shadow: inset 0 -1px 0 0 #3e444e;
+    padding: 16px 16px 16px 24px;
+    margin-bottom: 32px;
+}
+
+.subHeaderMessages > div {
+    margin-bottom: 23px;
+}
+
+.subHeaderMessages > div > img {
+    width: 24px;
+    height: 24px;
+    border: solid 1px #40454b;
+    border-radius: 50%;
+}
+
+.subHeaderMessages > div,
+.subHeaderMessages > ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.subHeaderMessages > div > span {
+    line-height: 1.25;
+    font-size: 16px;
+}
+
+.subHeaderMessages > ul > li > a {
+    color: #5f6773;
+}
+
+.subHeaderMessages > ul > li > a:active {
+    color: #fff;
+    padding-bottom: 19px;
+    box-shadow: inset 0 -2px 0 0 #c92020;
+}
+
+.user {
+    padding-top: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.user:active {
+    background: #2473da;
+}
+
+.user:active > div > div > span {
+    color: rgba(255,255,255,0.5);
+}
+
+.user > div:last-child {
+    display: flex;
+    padding-bottom: 16px;
+    box-shadow: inset 0 -1px 0 0 rgba(90, 95, 101, 0.5);
+}
+
+.user > div {
+    position: relative;
+}
+
+.user > div > img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.user > div > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.userBlockInfo {
+    background: rgba(25, 29, 33, 0.9);
+    color: #fff;
+}
+
+.userBlockInfo,
+.userBlockInfo > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.userBlockInfo > div:nth-child(2),
+.userBlockInfo > div:nth-child(3){
+    margin: 24px 24px 0 24px;
+    padding-bottom: 24px;
+    box-shadow: inset 0 -1px 0 0 rgba(90, 95, 101, 0.5);
+}
+
+.userBlockInfo > div:nth-child(2) > div,
+.userBlockInfo > div:nth-child(3) > div{
+    margin-bottom: 19px;
+}
+
+.userBlockInfo > div:nth-child(2) > div:last-child,
+.userBlockInfo > div:nth-child(3) > div:last-child{
+    margin-bottom: 0;
+}
+.userBlockInfo > div:nth-child(3) > div:last-child > a{
+    color: #25c14a;
+    line-height: 1.29;
+}
+
+.userBlockInfo > div:first-child {
+    background: #14171a;
+    align-items: center;
+    padding: 24px 0;
+}
+
+.userBlockInfo > div:first-child > span {
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.29;
+    margin-top: 16px;
+    margin-bottom: 5px;
+}
+
+.userBlockInfo > div:first-child > span:last-child {
+    color: rgba(128,135,143,0.9);
+    line-height: 1.29;
+    margin: 0;
+}
+
+.userBlockInfo > div > img {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+}
+
+.userBlockInfo > div > div > p {
+    line-height: 1.21;
+    color: rgba(121,127,134,0.9);
 }
