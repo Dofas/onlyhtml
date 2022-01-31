@@ -379,3 +379,19 @@ header {
     line-height: 1.21;
     color: rgba(121,127,134,0.9);
 }
+
+.chat {
+    border: solid 1px #979797;
+    background: #f3f4f7;
+    width: 50%;
+}
+
+.userChatAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.customInput {
+    width: 50%;
+}
